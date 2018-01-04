@@ -2,7 +2,7 @@
 
 A simple app that hits Akira status backend and displays information.
 
-![](http://puu.sh/yTUYF/84b5a53f76.png)
+![](http://puu.sh/yTWcx/a360151d1b.png)
 
 ## Getting Started
 If for some reason you want to host this website yourself, first clone the repository and install nodejs. 
