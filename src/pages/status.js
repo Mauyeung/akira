@@ -62,6 +62,10 @@ const Closeddiv = styled.div`
 
 const Timediv = styled.div`
 	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 `;
 
 const Hoursdiv = styled.div`
