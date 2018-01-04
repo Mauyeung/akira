@@ -36,17 +36,8 @@ const H4 = styled.h4`
 	margin: 0;
 `;
 
-const flicker = keyframes`
-	0%   { opacity:1; }
-	50%  { opacity:0; }
-	100% { opacity:1; }
-`;
-
 const A = styled.a`
 	cursor: pointer;
-	&:hover {
-		animation: ${flicker} 2s linear infinite;
-	}
 `;
 
 const Content = styled.div`
@@ -85,7 +76,6 @@ export default class Status extends React.Component {
 
 	constructor(props) {
 		super(props)
-
 		this.state = {
 			loading: true,
 			online: false,
@@ -100,7 +90,6 @@ export default class Status extends React.Component {
 	componentWillMount() {
 		let url = 'https://app.akira.md/api/system_status';
 		axios.get(url).then((response) => {
-			console.log(response.data);
 			this.setState({
 				loading: false,
 				online: response.data.online,
@@ -110,7 +99,6 @@ export default class Status extends React.Component {
 				time: moment(response.system_time).format('h:mm'),
 				date: moment(response.system_time).format('dddd, MMMM D'),
 			});
-			console.log(this.state);
 		}).catch((error) => {
 			console.log(error);
 		});
